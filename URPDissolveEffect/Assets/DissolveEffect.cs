@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DissolveEffect : MonoBehaviour
 {
-    [SerializeField] Material dissolveMat;
+    [SerializeField] Material[] dissolveMat;
     [SerializeField] float appearanceValue;
     [SerializeField] float maxAppearanceValue;
     [SerializeField] float appearanceSpeed=10f;
@@ -14,7 +14,10 @@ public class DissolveEffect : MonoBehaviour
 
     void Start()
     {
-        dissolveMat.SetFloat(dissolveVal, appearanceValue/maxAppearanceValue);
+        foreach (Material mat in dissolveMat)
+        {
+            mat.SetFloat(dissolveVal, appearanceValue/maxAppearanceValue);
+        }
     }
     
     void Update()
@@ -42,28 +45,34 @@ public class DissolveEffect : MonoBehaviour
 
     void Appear()
     {
+        foreach(Material mat in dissolveMat)
+        {
             if(appearanceValue<=maxAppearanceValue)
             {
                 appearanceValue +=5 * Time.deltaTime * appearanceSpeed;
-                dissolveMat.SetFloat(dissolveVal, appearanceValue/maxAppearanceValue);
+                mat.SetFloat(dissolveVal, appearanceValue/maxAppearanceValue);
             }
             else
             {
                 initiateAppearanceSequence = false;
             }
+        } 
     }
 
     void Disappear()
     {
-            if(appearanceValue>=0)
+        foreach (Material mat in dissolveMat)
+        {
+             if(appearanceValue>=0)
             {
                 appearanceValue -=5 * Time.deltaTime * appearanceSpeed;
-                dissolveMat.SetFloat(dissolveVal, appearanceValue/maxAppearanceValue);
+                mat.SetFloat(dissolveVal, appearanceValue/maxAppearanceValue);
             }
             else
             {
                 initiateDisappearanceSequence = false;
             }
+        }  
     }
 
     public void InitiateAppearence()
