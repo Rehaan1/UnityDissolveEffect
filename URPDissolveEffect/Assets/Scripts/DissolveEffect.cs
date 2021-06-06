@@ -6,11 +6,14 @@ public class DissolveEffect : MonoBehaviour
 {
     [SerializeField] Material[] dissolveMat;
     [SerializeField] float appearanceValue;
-    [SerializeField] float maxAppearanceValue;
     [SerializeField] float appearanceSpeed=10f;
+    [SerializeField] float appearanceLimit=100f;
     [SerializeField] string dissolveVal;
+    float minApperanceValue;
+    float maxAppearanceValue=100f;
     bool initiateAppearanceSequence = false;
     bool initiateDisappearanceSequence = false;
+
 
     void Start()
     {
@@ -18,6 +21,7 @@ public class DissolveEffect : MonoBehaviour
         {
             mat.SetFloat(dissolveVal, appearanceValue/maxAppearanceValue);
         }
+        minApperanceValue = appearanceValue;
     }
     
     void Update()
@@ -47,7 +51,7 @@ public class DissolveEffect : MonoBehaviour
     {
         foreach(Material mat in dissolveMat)
         {
-            if(appearanceValue<=maxAppearanceValue)
+            if(appearanceValue<=maxAppearanceValue && appearanceValue<=appearanceLimit)
             {
                 appearanceValue +=5 * Time.deltaTime * appearanceSpeed;
                 mat.SetFloat(dissolveVal, appearanceValue/maxAppearanceValue);
@@ -63,7 +67,7 @@ public class DissolveEffect : MonoBehaviour
     {
         foreach (Material mat in dissolveMat)
         {
-             if(appearanceValue>=0)
+             if(appearanceValue>=minApperanceValue)
             {
                 appearanceValue -=5 * Time.deltaTime * appearanceSpeed;
                 mat.SetFloat(dissolveVal, appearanceValue/maxAppearanceValue);

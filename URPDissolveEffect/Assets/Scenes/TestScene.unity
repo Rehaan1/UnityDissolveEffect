@@ -1088,8 +1088,8 @@ MonoBehaviour:
   dissolveMat:
   - {fileID: 2100000, guid: c76b58654c619bd4db50e51f5d9884e3, type: 2}
   appearanceValue: 0
-  maxAppearanceValue: 100
   appearanceSpeed: 10
+  appearanceLimit: 100
   dissolveVal: Vector1_CC876C20
 --- !u!1 &1277200120 stripped
 GameObject:
@@ -1221,7 +1221,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1459481488}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.329, y: 0.118, z: -0.10399999}
+  m_LocalPosition: {x: 0.35, y: 0.118, z: -0.10399999}
   m_LocalScale: {x: 0.09059672, y: 0.09059672, z: 0.09059672}
   m_Children: []
   m_Father: {fileID: 863940629}
@@ -1411,7 +1411,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: aed8c47425ab91f4eb06ce6fe47c3e4e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.232
+      value: 0.32
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: aed8c47425ab91f4eb06ce6fe47c3e4e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1476,8 +1476,8 @@ MonoBehaviour:
   dissolveMat:
   - {fileID: 2100000, guid: 691ffc2f2750f5142888e53deb7511ee, type: 2}
   appearanceValue: 0
-  maxAppearanceValue: 100
   appearanceSpeed: 10
+  appearanceLimit: 100
   dissolveVal: Vector1_CC876C20
 --- !u!4 &1912540326 stripped
 Transform:
@@ -1595,19 +1595,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8b73e8872ca76104bbca4ee2b704a1b4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.13997898
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8b73e8872ca76104bbca4ee2b704a1b4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.033
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8b73e8872ca76104bbca4ee2b704a1b4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.09364356
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8b73e8872ca76104bbca4ee2b704a1b4, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7864001
+      value: 0.5916349
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8b73e8872ca76104bbca4ee2b704a1b4, type: 3}
       propertyPath: m_LocalRotation.x
@@ -1615,7 +1615,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8b73e8872ca76104bbca4ee2b704a1b4, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.61771756
+      value: 0.806206
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8b73e8872ca76104bbca4ee2b704a1b4, type: 3}
       propertyPath: m_LocalRotation.z
@@ -1627,7 +1627,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8b73e8872ca76104bbca4ee2b704a1b4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 76.299
+      value: 107.454
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8b73e8872ca76104bbca4ee2b704a1b4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -1636,7 +1636,7 @@ PrefabInstance:
     - target: {fileID: 2300000, guid: 8b73e8872ca76104bbca4ee2b704a1b4, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e0fee619dbabbde4aa9f8d32ac10abba, type: 2}
+      objectReference: {fileID: 2100000, guid: bc0b81be53a61ba4ab96b22ad9ae07d5, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b73e8872ca76104bbca4ee2b704a1b4, type: 3}
 --- !u!1 &2113547493 stripped
@@ -1658,10 +1658,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dissolveMat:
-  - {fileID: 2100000, guid: e0fee619dbabbde4aa9f8d32ac10abba, type: 2}
+  - {fileID: 2100000, guid: bc0b81be53a61ba4ab96b22ad9ae07d5, type: 2}
   appearanceValue: 0
-  maxAppearanceValue: 100
-  appearanceSpeed: 10
+  appearanceSpeed: 1
+  appearanceLimit: 21
   dissolveVal: Vector1_CC876C20
 --- !u!4 &2113547497 stripped
 Transform:
@@ -5962,8 +5962,8 @@ MonoBehaviour:
   - {fileID: 2100000, guid: fc31024ae31a32e44905985bb73de622, type: 2}
   - {fileID: 2100000, guid: a5d0e9480fda9c741b0defe1a3d3ca36, type: 2}
   appearanceValue: 0
-  maxAppearanceValue: 100
   appearanceSpeed: 3
+  appearanceLimit: 100
   dissolveVal: Vector1_CC876C20
 --- !u!23 &8726464191467193361
 MeshRenderer:

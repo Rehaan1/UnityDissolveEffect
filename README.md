@@ -31,8 +31,9 @@ Repository for the Dissolve Effect in the URP Unity
 - Go to the DissolveShader and look at the inspector and check the properties
 - Search for the value Dissolve and look at its key should be something like "Vector1_CC876C20"
 - Add this to DissolveVal in the DissolveEffect Script
-- Set Max Appearance Value to 100 for complete appearance, feel free to tweak these values
-- Set Appearane Speed as you wish
+- The Appearance Value is by default at 0. Changing the Appearance Value results in change in the Minimum Appearance Value
+- Appearance Limit is for complete appearance (By Default it is at 100), feel free to tweak these values to change the amount of appearance.
+- Set Appearance Speed as you wish
 - After Adding to MRTK Buttons Call:
  1. Function InitiateAppearance() to start appearance effect
  2. Function InitiateDisappearance() to start disappearance effect
